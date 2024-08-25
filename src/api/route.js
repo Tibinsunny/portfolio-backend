@@ -1,6 +1,6 @@
 const express = require("express");
 
-const emojis = require("./emojis");
+
 const blog_details_model = require("../models/blogs");
 
 const router = express.Router();
@@ -21,6 +21,6 @@ router.get("/blogs/:id", async (req, res) => {
   });
 });
 
-router.use("/emojis", emojis);
+
 
 module.exports = router;

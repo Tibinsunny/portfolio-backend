@@ -1,5 +1,7 @@
-const app = require("../app");
+const app = require("./app");
+const connection = require("../database/connection");
+const port = process.env.PORT || 3000;
 
-module.exports = (req, res) => {
-  app(req, res); // Pass the request and response to your Express app
-};
+app.listen(port, "0.0.0.0", function () {
+  console.log("Server Started on Port" + port);
+});
