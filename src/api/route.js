@@ -4,6 +4,11 @@ const express = require("express");
 const blog_details_model = require("../models/blogs");
 
 const router = express.Router();
+router.get("/ping",(req,res) =>{
+  res.json ({
+    message:"Pong"
+  })
+})
 
 router.get("/blogs", async (req, res) => {
   let blogDetails = await blog_details_model.find({}, { title: 1 });
